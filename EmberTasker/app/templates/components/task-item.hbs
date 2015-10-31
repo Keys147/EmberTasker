@@ -1,0 +1,20 @@
+{{#if editing}}
+{{input class="edit" value=task.title action="submitTask"}}
+{{else}}
+   
+
+    <label class="{{if task.complete 'completed'}}" {{action "editTask" on="doubleClick"}}>
+	<input type="checkbox" {{action "updateTask" bubbles=false}} class="{{if task.complete 'checked'}}" class="toggle">
+	<span class="task-title"> {{task.title}} </span>
+    <button class="task-details-revealer" {{action "expandTask"}}></button>
+    <button class="move-to-trash" {{action "deleteTask"}}></button>
+
+</label>
+    	{{#if expand}}
+
+    			{{task-item-details task=task}}
+
+    	{{/if}}
+
+    
+{{/if}}

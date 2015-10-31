@@ -374,12 +374,37 @@ position:relative;
 								li[data-content="view-stats"]:before{content:'\f012';font-family:fontawesome;left: -10px;position: relative;}
 									li[data-content="add-stats"]:before{content:'\f044';font-family:fontawesome;left: -10px;position: relative;}
 
-									 .content-container{border:1px solid #ccc;border-width:1px 0;display:none}
+									 .content-container{border:1px solid #ccc;border-width:1px 0;display:none;.clearfix()}
 									 .content-container.current-content{display:block}
 
-								
+
+#add-stats ul {.clearfix();margin: 20px;}
+	
+#add-stats ul li{width:45%;float:left;display:inline-block;margin-left:5%;margin-bottom:20px;}
+#add-stats input{
+	 width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#add-stats ul li.full-width{width:100%;margin-left:25%}
 
 
+#add-stats button{
+	
+	.button-styles;
+	background: #fff;
+    width: 50%;
+    color: #22A7F0;
+    font-size: 24px;
+    vertical-align: middle;
+    height: 50px;
+    font-family: Roboto-thick;
+    border:1px solid #ccc;
+    border-radius:5px;
+}							
 
 
 table
@@ -404,6 +429,10 @@ table th,table td
 table th{color:#fff;background:#05314c}
 table tr:nth-of-type(even){background:#f1f1f1}
 
+
+
+
+
 						}
 
 						
@@ -413,6 +442,8 @@ table tr:nth-of-type(even){background:#f1f1f1}
 
 
   }
+
+
 
 
   #navigation{
@@ -452,3 +483,8 @@ table tr:nth-of-type(even){background:#f1f1f1}
 }/*ember-tasker*/
 
 } /*body*/
+
+
+
+
+

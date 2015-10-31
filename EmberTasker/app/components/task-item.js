@@ -47,7 +47,10 @@ export default Ember.Component.extend({
 
     				this.toggleProperty('expand');
 
-    	}
+    	},
+        saveStat(task,stat){
+            this.sendAction('saveStat', task,stat);
+        }
     
     }
 });

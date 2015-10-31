@@ -4,32 +4,31 @@ export default Ember.Route.extend({
 
 	model(){
 
-				return this.store.findAll('task');
+		return this.store.findAll('task');
 
-		   },
+	},
 
 	actions:{
 
-					createTask(newTitle){
+		createTask(newTitle){
 
-							this.store.createRecord('task',{
+			this.store.createRecord('task',{
 
-									title:newTitle,
-									complete:false
+				title:newTitle,
+				complete:false
 
-							}).save();
+			}).save();
 
-					},
+		},
 
-					updateTask(task){
-						task.save();
-					},
+		updateTask(task){
+			task.save();
+		},
 
-					deleteTask(task){
-						task.destroyRecord();
-					}
-
-			}
+		deleteTask(task){
+			task.destroyRecord();
+		}
+	}
 
 
 

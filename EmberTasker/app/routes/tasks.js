@@ -32,7 +32,7 @@ export default Ember.Route.extend({
 			let stats = task.get('stats');
 			let currentStat = this.store.createRecord('stat',{
 				entryAt: new Date(),
-				time_spent: stat.time_spent,
+				timeSpent: stat.timeSpent,
 				description: stat.description,
 				task: task
 			});

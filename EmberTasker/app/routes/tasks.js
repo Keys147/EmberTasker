@@ -29,19 +29,17 @@ export default Ember.Route.extend({
 			task.destroyRecord();
 		},
 		saveStat(task,stat){
-			let stats = task.get('stats');
 			let currentStat = this.store.createRecord('stat',{
 				entryAt: new Date(),
 				timeSpent: stat.timeSpent,
 				description: stat.description,
-				task: task
 			});
 			var _this = this;
 			task.get('stats').then(function(stats){
 				stats.addObject(currentStat);
-				task.save().then(function(){
-					currentStat.save()
-				})
+				currentStat.save().then(function(){
+					task.save()
+				});
 			});
 		}
 	}

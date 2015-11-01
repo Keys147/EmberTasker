@@ -9,14 +9,9 @@ export default Ember.Component.extend({
 
 		this.$().addClass('tab-current');
 		this.$().siblings().removeClass('tab-current');
-		var contentID=this.$().data('content');
-		this.$().closest('nav').siblings('.content-container').each(function(){
-			if($(this).attr('id')== contentID ) { 
-				$(this).addClass('current-content');
-				$(this).siblings().removeClass('current-content');
-			}
+		var content=this.get('type');
+		this.sendAction('handleTab',content);
 
-		})
 	}
 
 });

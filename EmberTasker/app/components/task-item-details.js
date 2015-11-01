@@ -5,12 +5,27 @@ export default Ember.Component.extend({
 	description: '',
 	tagName:'section',
 	classNameBindings:['task-details-container'],
+	showView: true,
 	actions: {
 		saveStat(){
 			this.sendAction('saveStat', this.get('task'), {
 				timeSpent: this.get('time_spent'),
 				description: this.get('description')
 			});
-		}
+			this.set('showView',true);
+			this.set('time_spent','');
+			this.set('description','');
+		},
+		handleTab(type){
+				switch(type){
+					case 'view_task': 
+					this.set('showView',true);
+					break;
+					case 'add_task': 
+					this.set('showView',false);
+					break;
+				}
+		},
+
 	}
 });

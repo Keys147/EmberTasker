@@ -1,10 +1,10 @@
 <nav class="task-details-nav">
 	<ul>
-		{{tab-list-item task=task tab-title="View Task Status" data-content="view-stats" class="tab-current"}}
-		{{tab-list-item task=task tab-title="Add Task Status" data-content="add-stats" }}
+		{{tab-list-item handleTab='handleTab' task=task tab-title="View Task Status" data-content="view-stats" class="tab-current" type='view_task' action='tabClicked' }}
+		{{tab-list-item handleTab='handleTab' task=task tab-title="Add Task Status" data-content="add-stats" type='add_task' }}
 	</ul>
 </nav>
-
+{{#if showView}}
 <div class="content-container current-content" id="view-stats">
 	<table>
 		<thead>
@@ -29,8 +29,7 @@
 		</tbody>
 	</table>
 </div>
-
-
+{{else}}
 <div class="content-container clearfix" id="add-stats">
 	<ul>
 		<li>
@@ -45,6 +44,7 @@
 	</ul>
 </div>
 
+{{/if}}
 
 
 

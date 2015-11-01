@@ -6,9 +6,6 @@
 </nav>
 
 <div class="content-container current-content" id="view-stats">
-	{{task.stats}}
-		
-	
 	<table>
 		<thead>
 			<tr>
@@ -18,16 +15,17 @@
 			</tr>
 		</thead>
 		<tbody>
-			Hello
-			{{#each task as |task|}}
-			{{#each task.stats as |stat|}}
-			<tr>
+				{{#each task.stats as |stat|}}
+				<tr>
 				<td>{{stat.date}}</td>
-				<td>2</td>
-				<td>Learnt Routes</td>
-			</tr>
-			{{/each}}
-			{{/each}}
+				<td>{{stat.timeSpent}}</td>
+				<td>{{stat.description}}</td>
+				</tr>
+				{{else}}
+				<tr>
+				No current stats
+				</tr>
+				{{/each}}
 		</tbody>
 	</table>
 </div>

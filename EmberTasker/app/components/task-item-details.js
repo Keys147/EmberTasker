@@ -4,7 +4,9 @@ export default Ember.Component.extend({
 	time_spent: '',
 	description: '',
 	stats: function(){
-		return this.get('task.stats');
+		return DS.PromiseObject.create({
+    		promise: this.get('task.stats')
+ 	 });
 	}.property('task'),
 	tagName:'section',
 	classNameBindings:['task-details-container'],

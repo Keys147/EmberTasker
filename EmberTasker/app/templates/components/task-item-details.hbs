@@ -19,15 +19,17 @@
 		</thead>
 		<tbody>
 			Hello
-			{{#each task as |task|}}
-			{{#each task.stats as |stat|}}
-			<tr>
+			{{#if stats.isPending}}
+				Loading
+			{{else}}
+				{{#each stats.content as |stat|}}
+				<tr>
 				<td>{{stat.date}}</td>
 				<td>2</td>
 				<td>Learnt Routes</td>
-			</tr>
+				</tr>
 			{{/each}}
-			{{/each}}
+			{{/if}}
 		</tbody>
 	</table>
 </div>

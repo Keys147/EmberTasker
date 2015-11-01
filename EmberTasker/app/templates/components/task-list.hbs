@@ -48,19 +48,17 @@
        			</span>
             	
             	
-			<button class="trash tooltip"  {{action "clearCompleted"  bubbles=false}}>
+			<button class="trash" title="Move all completed tasks to trash" {{action "clearCompleted"  bubbles=false}}>
 
             		{{fa-icon icon="trash-o"}}
 
+      </button>
+
+        {{/link-to}}
 
 
-    		</button>
-
-            {{/link-to}}
-
-
-       {{#link-to "tasks.statistics" class="tab-completed"  activeClass="tab-current" tagName="li"}}
-            Statistics
+       {{#link-to "tasks.statistics" class="tab-dashboard" title="Click to view the recordings of last 7 days"  activeClass="tab-current" tagName="li"}}
+           Dashboard
             {{/link-to}}
          
                                         

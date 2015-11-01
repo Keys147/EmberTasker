@@ -10,7 +10,7 @@ export default Ember.Component.extend({
         		editTask() {
 
 			            this.toggleProperty('editing');
-		},
+                       		},
 
         		submitTask() {
 
@@ -37,7 +37,7 @@ export default Ember.Component.extend({
     	},
 
     		updateTask(){
-
+                
     			let task = this.get('task');
     			task.toggleProperty('complete');
 				this.sendAction('updateTask', task);

@@ -288,3 +288,45 @@
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]),::-webkit-datetime-edit-text:not([aria-valuenow]) {
     color: transparent;
 }
+
+.font-smoothing(@string){
+
+-webkit-font-smoothing:@string;
+-moz-font-smoothing:@string;
+font-smoothing:@string;	
+
+}
+
+.display-flex(){
+	
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+.flex(@string){
+		-webkit-flex: @string;
+	-moz-flex:@string;
+	-ms-flex:@string;
+	flex:@string;
+}
+
+.flex-flow(@string){
+		
+		-webkit-flex-flow: @string;
+	-moz-flex-flow: @string;
+	-ms-flex-flow: @string;
+	flex-flow: @string;
+
+}
+
+.justify-content(@string){
+
+	-webkit-justify-content: @string;
+	-moz-justify-content:@string;
+	-ms-justify-content: @string;
+	justify-content:@string;
+	
+}

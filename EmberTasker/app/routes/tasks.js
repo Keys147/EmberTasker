@@ -34,13 +34,11 @@ export default Ember.Route.extend({
 				entryAt: new Date(),
 				timeSpent: stat.timeSpent,
 				description: stat.description,
+				task :task
 			});
 			var _this = this;
-			task.get('stats').then(function(stats){
-				stats.addObject(currentStat);
-				currentStat.save().then(function(){
+			currentStat.save().then(function(){
 					task.save()
-				});
 			});
 		}
 	}

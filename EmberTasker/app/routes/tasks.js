@@ -15,7 +15,8 @@ export default Ember.Route.extend({
 			this.store.createRecord('task',{
 
 				title:newTitle,
-				complete:false
+				complete:false,
+				createdAt: new Date()
 
 			}).save();
 

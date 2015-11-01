@@ -5,7 +5,7 @@
 
     <label class="{{if task.complete 'completed'}}" {{action "editTask" on="doubleClick"}}>
 	<input type="checkbox" {{action "updateTask" bubbles=false}} class="{{if task.complete 'checked'}}" class="toggle">
-	<span class="task-title"> {{task.title}} </span>
+	<span class="task-title"> {{task.title}} ({{task.createdAt}})</span>
     <button class="task-details-revealer" {{action "expandTask"}}></button>
     <button class="move-to-trash" {{action "deleteTask"}}></button>
 

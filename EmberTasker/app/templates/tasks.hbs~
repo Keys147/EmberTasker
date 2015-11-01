@@ -1,7 +1,0 @@
-{{task-input action="createTask"}}
-
-{{#task-list tasks=model}}
-	
-	{{outlet}}
-
-{{/task-list}}
